@@ -8,13 +8,13 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install -- no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application inside the container
-COPY ...
+COPY . .
 
 # Expose the FastAPI port
 EXPOSE 8000
 
 # Run the FastAPI application with Uvicorn
-CMD ["uvicorn", "app:app", " -- host", "0.0.0.0", " -- port", "8000"]
+CMD ["uvicorn", "app:app", " --host", "0.0.0.0", " -- port", "8000"]

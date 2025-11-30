@@ -1,8 +1,11 @@
-flask==2.3.4
+# Core
+flask==2.3.3
 numpy==1.25.0
 pandas==2.1.0
 scikit-learn==1.2.2
 joblib==1.3.2
+
+# Build tools
 pip==23.2.1
 setuptools==68.0.0
 wheel==0.40.0
